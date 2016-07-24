@@ -15,9 +15,10 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ff02::3 ip6-allhosts
 10.0.0.11 chefserver01.example.com chefserver01
+10.0.0.24 workstation01.example.com workstation01
 EOF
 
 # Ubuntu x86_64 is only supported at the moment
-URL='https://packages.chef.io/stable/ubuntu/12.04/chef_12.12.15-1_amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+URL='http://workstation01.example.com/others/chef_12.12.15-1_amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 
 
